@@ -415,6 +415,95 @@ End the message with **CTRL+Z**. You must first run `AT+CMGF=1` and other init c
 | `AT+CMGS="<number>"` | Send SMS message          | Use after text-mode and parameter configuration |
 
 
+# 📞 **Call-Related AT Commands**
+
+These commands are used to make and receive voice calls, detect incoming calls, answer or hang up calls, and display caller ID information. They are essential for enabling GSM voice call functionality in microcontroller projects.
+
+## 📋 Command Overview (Updated)
+
+| Command         | Description                             |
+| --------------- | --------------------------------------- |
+| `ATD<number>;`  | Dial a number.                          |
+| `ATA`           | Answer an incoming call.                |
+| `ATH`           | Hang up an ongoing call.                |
+| `AT+CLCC`       | Query current call status.              |
+
+
+## ✅ `ATD<number>;`
+
+| **Description**       | Dial a number for a voice call.         |
+| --------------------- | --------------------------------------- |
+| **Syntax**            | `ATD<number>;`                          |
+| **Parameters**        | `<number>` = target phone number        |
+| **Expected Response** | `OK` if the command is accepted         |
+| **Call Status**       | `RINGING`, then `CONNECTED` if answered |
+| **Error Response**    | `NO CARRIER`, `BUSY`, or `NO DIALTONE`  |
+
+**Example:**
+
+```txt
+ATD+98912345678;
+```
+
+**Explanation:**
+This command initiates a voice call to the specified number. The semicolon `;` is necessary to indicate a **voice** call instead of a data call.
+
+## ✅ `ATA`
+
+| **Description**       | Answer an incoming voice call. |
+| --------------------- | ------------------------------ |
+| **Syntax**            | `ATA`                          |
+| **Parameters**        | None                           |
+| **Expected Response** | `OK`, followed by `CONNECTED`  |
+| **Error Response**    | `ERROR` if no call is waiting  |
+
+**Explanation:**
+When the module receives a call and sends `RING`, issuing `ATA` will answer the call.
+
+
+## ✅ `ATH`
+
+| **Description**       | Hang up the current or incoming call. |
+| --------------------- | ------------------------------------- |
+| **Syntax**            | `ATH`                                 |
+| **Parameters**        | None                                  |
+| **Expected Response** | `OK`                                  |
+| **Error Response**    | `ERROR` if no call is in progress     |
+
+**Explanation:**
+This command ends any ongoing voice call or cancels an incoming call before answering.
+
+
+## ✅ `AT+CLIP=1`
+
+| **Description**       | Enable caller ID for incoming calls.          |
+| --------------------- | --------------------------------------------- |
+| **Syntax**            | `AT+CLIP=1`                                   |
+| **Parameters**        | `1` = Enable caller ID                        |
+| **Expected Response** | `OK`, and `+CLIP: "+number"` on incoming call |
+| **Error Response**    | `ERROR` if unsupported                        |
+
+**Explanation:**
+Once this command is enabled, when a call comes in, the module will output:
+
+```txt
+RING
++CLIP: "+1234567890",145,"",,"",0
+```
+
+This allows your system to log or react based on the caller's phone number.
+
+
+## 📝 Summary Table
+
+| Command         | Purpose                            | Expected Response  | Usage Hint                                   |
+| --------------- | ---------------------------------- | ------------------ | -------------------------------------------- |
+| `ATD<number>;`  | Dial a voice call                  | `OK`               | Semicolon `;` indicates voice call           |
+| `ATA`           | Answer an incoming call            | `OK`               | When `RING` is received                      |
+| `ATH`           | Hang up an active or incoming call | `OK`               | Ends or rejects call                         |
+| `AT+CLIP=1`     | Show caller ID on incoming calls   | `OK`, then `+CLIP` | Enables call source detection                |
+
+
 # 🌐 **TCP/IP and GPRS Configuration**
 These commands prepare the module for internet access over GPRS. They configure the IP mode, activate the network context, and obtain the module’s local IP address necessary for TCP/UDP communication.
 
@@ -801,7 +890,7 @@ This sends data to a broker under the specified topic. After executing this comm
 
 # ✅ **🔌 Step-by-Step AT Command Sequence**
 
-This section provides a complete, step-by-step sequence of AT commands to initialize and use a GSM/GPRS module with MQTT capabilities. Each step includes the required command, explanation, expected response, and usage hints.
+This section provides a complete, structured AT command sequence to initialize a GSM/GPRS module and connect it to an MQTT broker. Each step includes commands, explanations, expected responses, and helpful usage tips.
 
 
 ## **1. Power-up and Basic Check**
@@ -860,7 +949,7 @@ AT+CFUN=1               // Set full functionality
 > ✅ Use this command to ensure full access to cellular services.
 
 
-## **4. SMS Configuration (Optional)**
+## **4. SMS Configuration**
 Configure the module for sending SMS in text mode.
 
 ```plaintext
@@ -878,7 +967,7 @@ AT+CSMP=17,167,0,0      // SMS format parameters (MCI/MTN)
 > 📝 For Rightel, use `AT+CSMP=17,167,0,4`.
 
 
-## **5. Clear Previous SMS (Optional)**
+## **5. Clear Previous SMS**
 Delete stored SMS messages from memory to avoid conflicts.
 
 ```plaintext
@@ -896,7 +985,7 @@ AT+CMGD=1,4             // Delete all SMS
 > 🧹 Useful before testing new SMS functions.
 
 
-## **6. Send SMS (Optional)**
+## **6. Send SMS**
 Send an SMS message to a phone number.
 
 ```plaintext
@@ -904,11 +993,11 @@ AT+CMGS="+989123456789"
 >Hello from GSM!<Ctrl+Z>
 ```
 
-| Command         | Description                           |
-|-----------------|---------------------------------------|
-| `AT+CMGS=...`   | Start sending SMS                     |
-| `<text>`        | Type message body                     |
-| `Ctrl+Z`        | End message and send                  |
+| Command         | Description                             |
+|-----------------|-----------------------------------------|
+| `AT+CMGS=...`   | Start sending SMS                       |
+| `<text>`        | Type message body                       |
+| `Ctrl+Z`        | End message and send (ASCII 26 or 0x1A) |
 
 > ✅ Must be in text mode (`AT+CMGF=1`) first.
 
@@ -971,7 +1060,7 @@ AT+QMTPUB=0,0,0,0,"sensor/temp"
 > ✅ QoS can be 0, 1, or 2 depending on reliability needs.
 
 
-## **10. MQTT Disconnect (Optional)**
+## **10. MQTT Disconnect**
 Gracefully disconnect from the MQTT broker.
 
 ```plaintext
