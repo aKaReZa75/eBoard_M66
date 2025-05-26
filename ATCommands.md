@@ -1,3 +1,91 @@
+This comprehensive tree structure provides a complete reference for GSM/GPRS module AT commands organized by functionality. From basic communication and SIM card management to advanced features like MQTT messaging, this guide covers all essential commands for IoT and embedded projects. Each command includes a brief description to help developers quickly understand its purpose and implementation. Whether you're working with SMS, voice calls, internet connectivity, or remote data transmission, this reference serves as your go-to resource for GSM module integration.
+
+```plaintext
+ GSM/GPRS AT Commands
+   ├── Basic Communication
+   │   ├── AT                     - Test command to check communication
+   │   ├── ATE0                   - Turn off command echo
+   │   ├── AT+CMEE=2              - Enable verbose error messages
+   │   └── AT+IPR=115200          - Set fixed UART baud rate to 115200 bps
+   │   
+   ├── SIM Card & Network
+   │   ├── AT+CPIN?               - Check SIM card status
+   │   ├── AT+CPIN="PIN"          - Enter SIM PIN code
+   │   ├── AT+CSQ                 - Get signal quality
+   │   ├── AT+CREG?               - Check network registration status
+   │   └── AT+COPS?               - Get current operator
+   │   
+   ├── Module Configuration
+   │   ├── AT+CFUN=1              - Set full functionality mode
+   │   ├── AT+CFUN=0              - Minimum functionality (RF off)
+   │   ├── AT+CFUN=4              - Airplane mode
+   │   └── AT&W                   - Save current settings
+   │
+   ├── Voice Call Operations
+   │   ├── AT+CLIP=1              - Enable caller ID display
+   │   ├── ATD+number<number>;    - Dial voice call
+   │   ├── ATA                    - Answer an incoming call
+   │   ├── ATH                    - Hang up an ongoing call
+   │   └── AT+CLCC                - List current calls
+   │   
+   ├── SMS Operations
+   │   ├── SMS Configuration
+   │   │   ├── AT+CMGF=1          - Set SMS mode to text
+   │   │   ├── AT+CSCS="GSM"      - Set character set to GSM
+   │   │   ├── AT+CSMP=17,167,0,0 - SMS text mode parameters (MCI, MTN)
+   │   │   └── AT+CSMP=17,167,0,4 - SMS text mode parameters (Rightel)
+   │   ├── SMS Management
+   │   │   ├── AT+CMTI            - Incoming SMS indication   
+   │   │   ├── AT+CMGR=<index>    - Read SMS by index from memory
+   │   │   ├── AT+CMGL="ALL"      - List all SMS messages
+   │   │   ├── AT+CMGD=1,4        - Delete all SMS messages
+   │   │   └── AT+CMGD=<index>    - Delete SMS by index
+   │   └── SMS Content
+   │       ├── AT+CMGS="<number>" - Send SMS to number
+   │       ├── >Message Text      - Type message content
+   │       └── Ctrl+Z             - Send message (ASCII 26 or 0x1A)
+   │
+   ├── GPRS & Internet
+   │   ├── TCP/IP Mode Setup
+   │   │   └── AT+QIMODE=0        - Set TCP/IP mode to non-transparent 
+   │   ├── APN Configuration
+   │   │   ├── AT+QIREGAPP        - Start TCP/IP registration
+   │   │   ├── AT+QICSGP=1,"APN"  - Set GPRS APN
+   │   │   └── AT+QICSGP?         - Show current GPRS context settings
+   │   ├── Connection Management
+   │   │   ├── AT+QIACT            - Activate GPRS context
+   │   │   ├── AT+QIDEACT          - Deactivate GPRS context
+   │   │   └── AT+QILOCIP          - Get local IP address
+   │   └── Network Status
+   │       ├── AT+QISTATE          - Query connection status
+   │       └── AT+QIDEACT=1        - Deactivate specific context
+   │   
+   ├── MQTT Operations
+   │   ├── MQTT Configuration
+   │   │   └── AT+QMTCFG="keepalive",0,120 - Configure MQTT keep-alive timer
+   │   ├── MQTT Connection
+   │   │   ├── AT+QMTOPEN=0,"<IP>","<PORT>" - Opens MQTT connection to the server
+   │   │   └── AT+QMTCONN=0,"<ClientID>","<Username>","<Password>" - Connects to MQTT broker
+   │   ├── MQTT Messaging
+   │   │   └── AT+QMTPUB=0,0,0,0,"<Topic>" - Publishes data to a specific MQTT topic
+   │   ├── MQTT Status Monitoring
+   │   │   ├── AT+QMTOPEN?          - Check MQTT open status
+   │   │   ├── AT+QMTCONN?          - Check MQTT connection status  
+   │   │   └── AT+QMTPUB?           - Check MQTT publish status
+   │   └── MQTT Disconnect
+   │       └── AT+QMTDISC=0       - Disconnect MQTT session
+   │
+   └── System Information
+       ├── AT+GSV                 - Get module version
+       ├── AT+GMI                 - Get manufacturer info
+       ├── AT+GMM                 - Get model identification
+       ├── AT+GSN                 - Get IMEI number
+       ├── AT+CIMI                - Get SIM IMSI
+       ├── AT+CCID                - Get SIM card ID
+       ├── AT+CBC                 - Get battery charge
+       └── AT+CCLK?               - Get current time
+```
+
 # 📡 **Basic AT Commands**
 These are used to test the communication between your microcontroller and the GSM/GPRS module, disable echo for cleaner output, and enable detailed error reporting for debugging.
 
@@ -948,85 +1036,111 @@ AT+CFUN=1               // Set full functionality
 
 > ✅ Use this command to ensure full access to cellular services.
 
+## 4. Call Configuration
+Configure the module for voice call functionality and enable caller ID.
 
-## **4. SMS Configuration**
+```
+AT+CLIP=1               // Enable caller ID for incoming calls
+```
+
+| Command | Purpose | Expected Response | Usage Hint |
+|---------|---------|-------------------|------------|
+| `AT+CLIP=1` | Show caller ID on incoming calls | `OK`, then `+CLIP` | Enables call source detection |
+
+**Tip:** When a call comes in, expect: `RING` followed by `+CLIP: "+1234567890",145,"",,"",0`
+
+
+## 5. SMS Configuration
 Configure the module for sending SMS in text mode.
 
-```plaintext
+```
 AT+CMGF=1               // Set SMS text mode
 AT+CSCS="GSM"           // Use GSM character set
 AT+CSMP=17,167,0,0      // SMS format parameters (MCI/MTN)
 ```
 
-| Command              | Purpose                       | Notes                                       |
-|----------------------|-------------------------------|---------------------------------------------|
-| `AT+CMGF=1`          | Use text mode                 | Easier than PDU mode                        |
-| `AT+CSCS="GSM"`      | Character encoding            | Use `"UCS2"` for Persian/Arabic             |
-| `AT+CSMP=...`        | SMS header/format settings    | Rightel may need `dcs=4`                    |
+| Command | Purpose | Notes |
+|---------|---------|-------|
+| `AT+CMGF=1` | Use text mode | Easier than PDU mode |
+| `AT+CSCS="GSM"` | Character encoding | Use "UCS2" for Persian/Arabic |
+| `AT+CSMP=...` | SMS header/format settings | Rightel may need dcs=4 |
 
-> 📝 For Rightel, use `AT+CSMP=17,167,0,4`.
+**Tip:** For Rightel, use `AT+CSMP=17,167,0,4`.
 
-
-## **5. Clear Previous SMS**
+## 6. Clear Previous SMS
 Delete stored SMS messages from memory to avoid conflicts.
 
-```plaintext
+```
 AT+CMGD=1,4             // Delete all SMS
 ```
 
-| Parameter | Meaning                     |
-|----------|-----------------------------|
-| `0`      | Delete only index           |
-| `1`      | Delete read messages        |
-| `2`      | Read + sent                 |
-| `3`      | Read + sent + unsent        |
-| `4`      | Delete all messages         |
+| Parameter | Meaning |
+|-----------|---------|
+| 0 | Delete only index |
+| 1 | Delete read messages |
+| 2 | Read + sent |
+| 3 | Read + sent + unsent |
+| 4 | Delete all messages |
 
-> 🧹 Useful before testing new SMS functions.
+**Tip:** Useful before testing new SMS functions.
 
-
-## **6. Send SMS**
+## 7. Send SMS
 Send an SMS message to a phone number.
 
-```plaintext
+```
 AT+CMGS="+989123456789"
 >Hello from GSM!<Ctrl+Z>
 ```
 
-| Command         | Description                             |
-|-----------------|-----------------------------------------|
-| `AT+CMGS=...`   | Start sending SMS                       |
-| `<text>`        | Type message body                       |
-| `Ctrl+Z`        | End message and send (ASCII 26 or 0x1A) |
+| Command | Description |
+|---------|-------------|
+| `AT+CMGS=...` | Start sending SMS |
+| `<text>` | Type message body |
+| `Ctrl+Z` | End message and send (ASCII 26 or 0x1A) |
 
-> ✅ Must be in text mode (`AT+CMGF=1`) first.
+**Tip:** Must be in text mode (`AT+CMGF=1`) first.
 
+## 8. Voice Call Operations
+Initiate, answer, or terminate voice calls.
 
-## **7. GPRS and Internet Setup**
+```
+ATD+989123456789;       // Dial a number
+ATA                     // Answer an incoming call
+ATH                     // Hang up an ongoing call
+```
+
+| Command | Purpose | Expected Response | Usage Hint |
+|---------|---------|-------------------|------------|
+| `ATD<number>;` | Dial a voice call | `OK` | Semicolon ; indicates voice call |
+| `ATA` | Answer an incoming call | `OK` | When RING is received |
+| `ATH` | Hang up an active or incoming call | `OK` | Ends or rejects call |
+
+**Tip:** Ensure `AT+CFUN=1` is set to enable call functionality.
+
+## 9. GPRS and Internet Setup
 Activate internet connectivity via GPRS using the APN settings.
 
-```plaintext
+```
 AT+QICSGP=1,"APN","",""   // Set APN (e.g., "mcinet")
 AT+QIACT                  // Activate GPRS context
 AT+QILOCIP                // Get local IP address
 ```
 
-| Command             | Purpose                        | Notes                                           |
-|---------------------|--------------------------------|-------------------------------------------------|
-| `AT+QICSGP=1,...`   | Set APN credentials            | Replace "APN" with carrier-specific value       |
-| `AT+QIACT`          | Activate GPRS connection       | Required before TCP/MQTT                        |
-| `AT+QILOCIP`        | Get assigned IP address        | Confirm successful internet connection          |
+| Command | Purpose | Notes |
+|---------|---------|-------|
+| `AT+QICSGP=1,...` | Set APN credentials | Replace "APN" with carrier-specific value |
+| `AT+QIACT` | Activate GPRS connection | Required before TCP/MQTT |
+| `AT+QILOCIP` | Get assigned IP address | Confirm successful internet connection |
 
-> 💡 Example APNs:
-> - MCI → `mcinet`
-> - MTN → `mtnirancell`
-> - Rightel → `rightel`
+**Tip:** Example APNs:
+- MCI → `mcinet`
+- MTN → `mtnirancell`
+- Rightel → `rightel`
 
-
-## **8. MQTT Setup**
+## 10. MQTT Setup
 Connect to an MQTT broker and authenticate.
 
-```plaintext
+```
 AT+QMTCFG="keepalive",0,120         // Keep-alive timer
 AT+QMTOPEN=0,"broker.hivemq.com",1883   // Open MQTT socket
 (wait for +QMTOPEN: 0,0)
@@ -1035,63 +1149,69 @@ AT+QMTCONN=0,"client_id","user","pass"  // Connect client
 (wait for +QMTCONN: 0,0,0)
 ```
 
-| Command                         | Purpose                            | Notes                                               |
-|---------------------------------|------------------------------------|-----------------------------------------------------|
-| `AT+QMTCFG=...`                 | Set keepalive interval             | Recommended: 120 seconds                            |
-| `AT+QMTOPEN=...`                | Connect to MQTT broker             | Wait for confirmation                               |
-| `AT+QMTCONN=...`                | Authenticate MQTT session          | Include username/password if needed                 |
+| Command | Purpose | Notes |
+|---------|---------|-------|
+| `AT+QMTCFG=...` | Set keepalive interval | Recommended: 120 seconds |
+| `AT+QMTOPEN=...` | Connect to MQTT broker | Wait for confirmation |
+| `AT+QMTCONN=...` | Authenticate MQTT session | Include username/password if needed |
 
-> 🌐 Tip: Use public brokers like `broker.hivemq.com` for testing.
+**Tip:** Use public brokers like `broker.hivemq.com` for testing.
 
-
-## **9. MQTT Publish**
+## 11. MQTT Publish
 After connecting to the broker, publish a message to a topic.
 
-```plaintext
+```
 AT+QMTPUB=0,0,0,0,"sensor/temp"
 > {"temperature": 25.5}<Ctrl+Z>
 ```
 
-| Command                    | Purpose                   | Notes                              |
-|----------------------------|---------------------------|------------------------------------|
-| `AT+QMTPUB=...`            | Start publishing          | Enter message content after prompt |
-| `Ctrl+Z`                   | Finish message            | Ends transmission                  |
+| Command | Purpose | Notes |
+|---------|---------|-------|
+| `AT+QMTPUB=...` | Start publishing | Enter message content after prompt |
+| `Ctrl+Z` | Finish message | Ends transmission |
 
-> ✅ QoS can be 0, 1, or 2 depending on reliability needs.
+**Tip:** QoS can be 0, 1, or 2 depending on reliability needs.
 
-
-## **10. MQTT Disconnect**
+## 12. MQTT Disconnect
 Gracefully disconnect from the MQTT broker.
 
-```plaintext
+```
 AT+QMTDISC=0                  // Disconnect MQTT session
 ```
 
-| Command         | Purpose                        | Notes                              |
-|-----------------|--------------------------------|------------------------------------|
-| `AT+QMTDISC=0`  | Cleanly close MQTT connection  | Prevent lingering sessions         |
+| Command | Purpose | Notes |
+|---------|---------|-------|
+| `AT+QMTDISC=0` | Cleanly close MQTT connection | Prevent lingering sessions |
 
-> 🔄 Always disconnect before restarting or reinitializing the module.
+**Tip:** Always disconnect before restarting or reinitializing the module.
 
+## 13. Summary Table
 
-## 📌 Summary Table
+| Step | Action | Required AT Commands |
+|------|--------|---------------------|
+| 1 | Basic check | `AT`, `ATE0`, `AT+CMEE=2`, `AT+IPR=115200` |
+| 2 | SIM & Network | `AT+CPIN?`, `AT+CSQ`, `AT+CREG?`, `AT+COPS?` |
+| 3 | Full functionality | `AT+CFUN=1` |
+| 4 | Call configuration | `AT+CLIP=1` |
+| 5 | SMS config (optional) | `AT+CMGF=1`, `AT+CSCS="GSM"`, `AT+CSMP=...` |
+| 6 | SMS cleanup (optional) | `AT+CMGD=1,4` |
+| 7 | Send SMS (optional) | `AT+CMGS=...` |
+| 8 | Voice call operations | `ATD<number>;`, `ATA`, `ATH` |
+| 9 | GPRS setup | `AT+QICSGP=1,"APN"`, `AT+QIACT`, `AT+QILOCIP` |
+| 10 | MQTT config | `AT+QMTCFG`, `AT+QMTOPEN`, `AT+QMTCONN` |
+| 11 | MQTT publish | `AT+QMTPUB` |
+| 12 | MQTT disconnect (optional) | `AT+QMTDISC` |
 
-| Step | Action                     | Required AT Commands                                  |
-| ---- | -------------------------- | ----------------------------------------------------- |
-| 1    | Basic check                | `AT`, `ATE0`, `AT+CMEE=2`, `AT+IPR=115200`           |
-| 2    | SIM & Network              | `AT+CPIN?`, `AT+CSQ`, `AT+CREG?`, `AT+COPS?`         |
-| 3    | Full functionality         | `AT+CFUN=1`                                           |
-| 4    | SMS config (optional)      | `AT+CMGF=1`, `AT+CSCS="GSM"`, `AT+CSMP=...`           |
-| 5    | SMS cleanup (optional)     | `AT+CMGD=1,4`                                         |
-| 6    | Send SMS (optional)        | `AT+CMGS=...`                                         |
-| 7    | GPRS setup                 | `AT+QICSGP=1,"APN"`, `AT+QIACT`, `AT+QILOCIP`         |
-| 8    | MQTT config                | `AT+QMTCFG`, `AT+QMTOPEN`, `AT+QMTCONN`              |
-| 9    | MQTT publish               | `AT+QMTPUB`                                           |
-| 10   | MQTT disconnect (optional) | `AT+QMTDISC`                                          |
+## 14. Notes
 
-## ✳️ Notes
-- ✅ Always check the response (`OK`, `ERROR`, or specific codes like `+CREG: 0,1`) after each command.
-- 🔧 Some modules might require slight variations (e.g., `AT+CSTT` instead of `AT+QICSGP`).
-- ⏱ Add delays between critical steps (e.g., `QMTOPEN` → wait for broker connection).
-- 🔄 Use hardware flow control (RTS/CTS) if supported.
-- 💾 Save settings with `AT&W` if the module supports it to persist configurations after reboot.
+✅ **Check Responses:** Always verify responses (OK, ERROR, or specific codes like `+CREG: 0,1`) after each command.
+
+🔧 **Module Variations:** Some modules may require slight variations (e.g., `AT+CSTT` instead of `AT+QICSGP`).
+
+⏱ **Delays:** Add delays between critical steps (e.g., wait for `+QMTOPEN: 0,0` before proceeding).
+
+🔄 **Flow Control:** Use hardware flow control (RTS/CTS) if supported by the module.
+
+💾 **Save Settings:** Use `AT&W` to save configurations if supported, ensuring persistence after reboot.
+
+📞 **Voice Calls:** Ensure the module has a microphone/speaker or headset connected for audio functionality.
