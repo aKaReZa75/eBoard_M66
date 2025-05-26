@@ -86,6 +86,36 @@ This comprehensive tree structure provides a complete reference for GSM/GPRS mod
        └── AT+CCLK?               - Get current time
 ```
 
+> [!IMPORTANT]
+> When sending AT commands to the module, **it is essential to append the carriage return (`\r`) and newline (`\n`) characters at the end of each command**.
+> These termination characters ensure proper interpretation by the module and prevent command processing errors.
+>
+> Failing to include `\r\n` may result in the module not recognizing or executing the command correctly.
+> 
+> Example:
+> ```
+> AT\r\n
+> ```
+> Make sure to follow this format to ensure seamless communication with the module.
+
+> [!CAUTION]
+> When the module responds to an AT command, **it always includes at least one carriage return (`\r`) and newline (`\n`) at the beginning and end of the response**. These characters ensure proper formatting and readability of the response.
+> 
+> ### Important Notes:
+> - The **minimum** termination format is `\r\n` at the start and end of the response.
+> - Depending on the specific command, the module **may include additional `\r\n` sequences** within the response.
+> - Ensure your parsing logic accounts for these extra characters to avoid unexpected behavior.
+> 
+> #### Example Response:
+> ```
+> \r\nOK\r\n
+> ```
+> 
+> For commands with more complex outputs, multiple `\r\n` sequences might be present.
+> 
+> Keeping this in mind will help maintain smooth communication between your system and the module.
+
+
 # 📡 **Basic AT Commands**
 These are used to test the communication between your microcontroller and the GSM/GPRS module, disable echo for cleaner output, and enable detailed error reporting for debugging.
 
