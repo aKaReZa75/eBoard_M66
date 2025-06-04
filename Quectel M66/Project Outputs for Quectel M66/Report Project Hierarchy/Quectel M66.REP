@@ -1,0 +1,9 @@
+------------------------------------------------------------
+Design Hierarchy Report for Quectel M66.PrjPcb
+-- 6/4/2025
+-- 10:57:42 AM
+------------------------------------------------------------
+
+Main                          SCH        (Main.SchDoc)
+    U_GSM                     SCH        (GSM.SchDoc)
+    U_Power                   SCH        (Power.SchDoc)
