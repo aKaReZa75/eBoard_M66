@@ -23,7 +23,7 @@ This comprehensive tree structure provides a complete reference for GSM/GPRS mod
    │
    ├── Voice Call Operations
    │   ├── AT+CLIP=1              - Enable caller ID display
-   │   ├── ATD+number<number>;    - Dial voice call
+   │   ├── ATD+<number>;          - Dial voice call
    │   ├── ATA                    - Answer an incoming call
    │   ├── ATH                    - Hang up an ongoing call
    │   └── AT+CLCC                - List current calls
