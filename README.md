@@ -45,7 +45,14 @@ The board is tailored for developers and students who want to **learn GSM-based 
   </tr>  
 </table>
 
-## Resources
+## Detailed Description
+| Aspect               | Description                  |
+|----------------------|------------------------------|
+| PCB Design Software  | Altium  V24.2.2              |
+| PCB Layers           | 1-Layer FR4                  |
+| GSM Module           | Quectel M66-FB-03            |
+
+# Resources
 - [Altium Library](https://github.com/aKaReZa75/Altium-Library)  
   ---  
    All PCB designs across all repositories and projects are built using this Altium Designer component library. It contains a wide range of verified footprints, schematic symbols, and 3D models, ensuring consistency and accuracy in PCB designs. If you're working on a new PCB, using this library will save you time and minimize errors.
