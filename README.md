@@ -5,6 +5,15 @@ The board is tailored for developers and students who want to **learn GSM-based 
 
 ![Quectel M66 Shield](Images/Quectel_M66.jpg)
 
+### **M66 GSM Module Pin Mapping**
+
+| **M66 Module** | **Arduino Pin** | **Functionality**                                     |
+| :------------: | :-------------: | :---------------------------------------------------- |
+|    `Reg_EN`    |        A0       | Enables external 4V regulator powering the GSM module |
+|    `GSM_PWR`   |        A1       | Turns the GSM module ON via power key logic           |
+|    `GSM_TX`    |        D0       | UART Receive line on microcontroller (GSM Transmit)   |
+|    `GSM_RX`    |        D1       | UART Transmit line on microcontroller (GSM Receive)   |
+
 <table>
   <tr>
   <td valign="top">
