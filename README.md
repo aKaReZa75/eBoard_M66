@@ -49,7 +49,7 @@ The board is tailored for developers and students who want to **learn GSM-based 
 | Aspect               | Description                  |
 |----------------------|------------------------------|
 | PCB Design Software  | Altium  V24.2.2              |
-| PCB Layers           | 1-Layer FR4                  |
+| PCB Layers           | 2-Layer FR4                  |
 | GSM Module           | Quectel M66-FB-03            |
 
 # Resources
