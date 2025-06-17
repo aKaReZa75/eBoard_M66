@@ -1,10 +1,14 @@
-Output: Export STEP
-Type  : ExportSTEP
-From  : Variant [[No Variations]] of PCB Document [PCB.PcbDoc]
-   Generated File[PCB.step]
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 7:59:21 PM On 6/17/2025
+
+Output: Bill of Materials
+Type  : BOM
+From  : Variant [[No Variations]] of Project [Quectel M66.PrjPcb]
+   Generated File[Bill of Materials-Quectel M66.pdf]
 
 
 Files Generated   : 1
 Documents Printed : 0
 
-Finished Output Generation At 10:57:48 AM On 6/4/2025
+Finished Output Generation At 7:59:25 PM On 6/17/2025
