@@ -69,7 +69,10 @@ The board is tailored for developers and students who want to **learn GSM-based 
   ---  
   This repository is your go-to reference for working with **AT commands** across GSM communication modules. It features a categorized and searchable collection of common and advanced AT commands with **descriptions, sample responses, and usage scenarios**. Whether you're debugging a modem, sending SMS, or configuring network settings, this guide helps you **master AT commands and streamline module communication in your embedded projects**.
 
-
+- [Shopping Link](./ShoppingLink.md)  
+  ---
+  This document provides links to trusted suppliers where you can purchase all the essential components for this project, ensuring quality and reliability.
+  
 # 💻 How to Use Git and GitHub
 To access the repository files and save them on your computer, there are two methods available:
 1. **Using Git Bash and Cloning the Repository**
