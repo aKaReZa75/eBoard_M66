@@ -3,6 +3,8 @@ This section provides a comprehensive list of components required for the "Quect
 Each item includes direct purchase links from reliable Iranian electronics suppliers, with recommended quantities for both essential needs and future prototyping.
 
 ## Capacitor
+- [ ] [**Cap_0603_10p**](https://iran-micro.com/%D8%AE%D8%A7%D8%B2%D9%86-10-%D9%BE%DB%8C%DA%A9%D9%88-%D9%81%D8%A7%D8%B1%D8%A7%D8%AF-smd-%D8%B3%D8%A7%DB%8C%D8%B2-0603-%D8%A8%D8%B3%D8%AA%D9%8720-%D8%AA%D8%A7%DB%8C%DB%8C) Quantity: 3, Prefer: 25, Supplier: LionElectronic
+- [ ] [**Cap_0603_33p**](https://lionelectronic.ir/products/3759-GRM1885C1H330FA01D) Quantity: 3, Prefer: 25, Supplier: LionElectronic
 - [ ] [**Cap_0805 33p**](https://lionelectronic.ir/products/1951-TCC0805COG330J500BT) Quantity: 4, Prefer: 25, Supplier: LionElectronic
 - [ ] [**Cap_0805_68p**](https://lionelectronic.ir/products/1954-0805CG680J500NT) Quantity: 1, Prefer: 25, Supplier: LionElectronic
 - [ ] [**Cap_0805_100n**](https://lionelectronic.ir/products/2791-CL21B104KBCNNNC) Quantity: 2, Prefer: 25, Supplier: LionElectronic
@@ -47,20 +49,19 @@ Each item includes direct purchase links from reliable Iranian electronics suppl
 - [ ] [**Res_0805_47K**](https://lionelectronic.ir/products/1593-SER0805J47K) Quantity: 3, Prefer: 25, Supplier: LionElectronic
 - [ ] [**Res_0805_100K**](https://lionelectronic.ir/products/1474-RS-05K1003FT) Quantity: 1, Prefer: 25, Supplier: LionElectronic
 - [ ] [**Res_0805_13K**](https://lionelectronic.ir/products/1453-0805W8F1302T5E) Quantity: 1, Prefer: 25, Supplier: LionElectronic **(Instead of: Res_0805_13.7K)**
+- [ ] [**Res_0805_15K**](https://lionelectronic.ir/products/1587-0805W8J0153T5E) Quantity: 2, Prefer: 25, Supplier: LionElectronic
 - [ ] [**Res_0805_18K**](https://lionelectronic.ir/products/5463-0805W8F1782T5E) Quantity: 1, Prefer: 25, Supplier: LionElectronic **(Instead of: Res_0805_17.8K)**
-
+- [ ] [**Res_Multi_10K**](https://lionelectronic.ir/products/3235-3296W-1-103LF) Quantity: 1, Prefer: 5, Supplier: LionElectronic
 
 ## Semiconductore
 - [ ] [**Semi_BJT_BC817**](https://lionelectronic.ir/products/134-BC817-40) Quantity: 3, Prefer: 10, Supplier: LionElectronic
 - [ ] [**Semi_Diod_TVS_SM712**](https://lionelectronic.ir/products/113-SM712.TCT) Quantity: 1, Prefer: 5, Supplier: LionElectronic 
 - [ ] [**Semi_Diod_TVS_SMF05**](https://lionelectronic.ir/products/121-SMF05C.TCT) Quantity: 1, Prefer: 5, Supplier: LionElectronic 
-
 - [ ] [**LED_0805_Blue**](https://lionelectronic.ir/products/3268-XL-2012UBC) Quantity: 2, Prefer: 10, Supplier: LionElectronic  
 - [ ] [**LED_0805_Yellow**](https://lionelectronic.ir/products/3267-XL-2012UYC) Quantity: 1, Prefer: 10, Supplier: LionElectronic  
 
 ## Switch
 - [ ] [**SW_PushButton-6-3.7-2.5**](https://lionelectronic.ir/products/4165-TS365TP) Quantity: 2, Prefer: 10, Supplier: LionElectronic
-
 
 # 🌟 Support Me
 If you found this repository useful:
