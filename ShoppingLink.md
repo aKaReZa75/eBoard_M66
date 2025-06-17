@@ -25,7 +25,7 @@ Each item includes direct purchase links from reliable Iranian electronics suppl
 - [ ] [**Simcard_Nano**](https://lionelectronic.ir/products/4593-SI107C-08200) Quantity: 1, Prefer: 1, Supplier: LionElectronic  
 ### PinHeader
 - [ ] [**Male_PinHeader**](https://lionelectronic.ir/products/5356-PLS-2.54-1X40GF) Quantity: 1, Prefer: 2, 
-- [ ] [**uFL**](https://lionelectronic.ir/products/5100-BWIPX-1-001E-) Quantity: 2, Prefer: 5, Supplier: LionElectronic  
+- [ ] [**uFL**](https://lionelectronic.ir/products/5100-BWIPX-1-001E-) Quantity: 1, Prefer: 5, Supplier: LionElectronic  
 - [ ] [**uFL to SMA**](https://roboeq.ir/products/detail/1509123/%DA%A9%D8%A7%D9%86%DA%A9%D8%AA%D9%88%D8%B1-UFL-%D8%A8%D9%87-SMA-%D9%85%D8%A7%D8%AF%DA%AF%DB%8C-%D8%B7%D9%88%D9%84-15-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%AA%D8%B1/) Quantity: 2, Prefer: 2, Supplier: RoboEQ  
 
 ## Integrated Circuit
@@ -34,6 +34,8 @@ Each item includes direct purchase links from reliable Iranian electronics suppl
 ## Module and Sensor
 - [ ] [**Quectel M66**](https://shop.sisoog.com/product/%D9%85%D8%A7%DA%98%D9%88%D9%84-m66fb-%DA%A9%D9%88%DB%8C%DA%A9%D8%AA%D9%84/) Quantity: 1, Prefer: 2, Supplier: Sisog
 - [ ] [**GSM Anntena**](https://roboeq.ir/products/detail/0502052/%D8%A2%D9%86%D8%AA%D9%86-GSM-%D8%B1%D8%A7%DB%8C%D8%AA-5-%D8%B3%D8%A7%D9%86%D8%AA%DB%8C-%D9%85%D8%AA%D8%B1/) Quantity: 1, Prefer: 1, Supplier: RoboEQ  
+- [ ] [**BT Anntena_PCB**](https://shop.redronic.com/product/telecommunication/bluetooth/antenna-bluetooth/pcb-built-in-antenna/) Quantity: 1, Prefer: 1, Supplier: Redronic
+- [ ] [**Mic 6mm**](https://voltatech.ir/product/%D9%85%DB%8C%DA%A9%D8%B1%D9%88%D9%81%D9%88%D9%86-%D8%AE%D8%A7%D8%B2%D9%86%DB%8C-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84%DB%8C-6mm-%D8%A7%D9%88%D8%B1%D8%AC%DB%8C%D9%86%D8%A7%D9%84/) Quantity: 1, Prefer: 2, Supplier: VoltaTech
 
 ## Other
 - [ ] [**Jumper**](https://ickala.com/pin-header-jumper/26295-jumper2pin-%D9%82%D8%B1%D9%85%D8%B2.html) Quantity: 2, Prefer: 10, Supplier: ICKala
