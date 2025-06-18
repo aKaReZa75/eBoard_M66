@@ -3,7 +3,7 @@ This section provides a comprehensive list of components required for the "Quect
 Each item includes direct purchase links from reliable Iranian electronics suppliers, with recommended quantities for both essential needs and future prototyping.
 
 ## Capacitor
-- [ ] [**Cap_0603_10p**](https://iran-micro.com/%D8%AE%D8%A7%D8%B2%D9%86-10-%D9%BE%DB%8C%DA%A9%D9%88-%D9%81%D8%A7%D8%B1%D8%A7%D8%AF-smd-%D8%B3%D8%A7%DB%8C%D8%B2-0603-%D8%A8%D8%B3%D8%AA%D9%8720-%D8%AA%D8%A7%DB%8C%DB%8C) Quantity: 3, Prefer: 25, Supplier: LionElectronic
+- [ ] [**Cap_0603_10p**](https://iran-micro.com/%D8%AE%D8%A7%D8%B2%D9%86-10-%D9%BE%DB%8C%DA%A9%D9%88-%D9%81%D8%A7%D8%B1%D8%A7%D8%AF-smd-%D8%B3%D8%A7%DB%8C%D8%B2-0603-%D8%A8%D8%B3%D8%AA%D9%8720-%D8%AA%D8%A7%DB%8C%DB%8C) Quantity: 3, Prefer: 25, Supplier: IranMicro
 - [ ] [**Cap_0603_33p**](https://lionelectronic.ir/products/3759-GRM1885C1H330FA01D) Quantity: 3, Prefer: 25, Supplier: LionElectronic
 - [ ] [**Cap_0805 33p**](https://lionelectronic.ir/products/1951-TCC0805COG330J500BT) Quantity: 4, Prefer: 25, Supplier: LionElectronic
 - [ ] [**Cap_0805_68p**](https://lionelectronic.ir/products/1954-0805CG680J500NT) Quantity: 1, Prefer: 25, Supplier: LionElectronic
