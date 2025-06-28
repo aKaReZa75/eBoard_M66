@@ -3,7 +3,7 @@
 This repository contains all the resources and files related to a custom-designed educational shield based on the **Quectel M66 GSM module**, fully compatible with the **Arduino UNO**.  
 The board is tailored for developers and students who want to **learn GSM-based communication**, explore **AT commands**, and work on embedded projects using **C/C++**.
 
-![Quectel M66 Shield](Images/Quectel_M66.jpg)
+![Quectel M66 Shield](Images/Quectel_M66.png)
 
 ### **M66 GSM Module Pin Mapping**
 
