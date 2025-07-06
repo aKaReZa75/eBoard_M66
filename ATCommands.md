@@ -511,7 +511,7 @@ Reads the stored SMS at a given index. If status is `"REC UNREAD"`, it becomes `
 
 ```bash
 AT+CMGS="+989123456789"
->Hello from USART!<CTRL+Z>
+> Hello from USART!<CTRL+Z>
 ```
 
 **Explanation:**
