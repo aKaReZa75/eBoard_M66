@@ -85,6 +85,7 @@ Quectel M66
           ├─ Voice — Call functionality through AT command set.
           └─ Syntax — `CR`, `NL` role and command sequencing tips.
 ```
+<table style="border-collapse: collapse;">
   <tr>
     <td valign="top" style="padding: 0 10px;">
       <h3 style="margin: 0;">
@@ -102,6 +103,7 @@ Quectel M66
       </a>
     </td>
   </tr>
+</table>
   
 # 💻 How to Use Git and GitHub
 To access the repository files and save them on your computer, there are two methods available:
