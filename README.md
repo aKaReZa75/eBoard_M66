@@ -72,6 +72,36 @@ The board is tailored for developers and students who want to **learn GSM-based 
 - [Shopping Link](./ShoppingLink.md)  
   ---
   This document provides links to trusted suppliers where you can purchase all the essential components for this project, ensuring quality and reliability.
+
+## Project Videos
+
+```plaintext
+Quectel M66
+    └── [aKaReZa 110 - GSM Modems]
+          ├─ Intro — Mobile networks (2G–4G) and module overview.
+          ├─ Modules — Quectel M66, SIMCom features.
+          ├─ AT Commands — Setup, communication, signal check.
+          ├─ SMS — Sending, receiving, error reporting via AT+CMEE.
+          ├─ Voice — Call functionality through AT command set.
+          └─ Syntax — `CR`, `NL` role and command sequencing tips.
+```
+  <tr>
+    <td valign="top" style="padding: 0 10px;">
+      <h3 style="margin: 0;">
+        <a href="https://youtu.be/w70hpMyDvRU">aKaReZa 110 – Microcontroller, GSM Modems</a>
+      </h3>
+      <p style="margin: 8px 0 0;">
+        Discover how to work with GSM modules and microcontrollers to send SMS, make calls, and connect to mobile networks. This video covers Quectel and SIMCom modules, AT command sequences, SIM status checks, signal strength readings, and voice call setup—ideal for mastering GSM communication in embedded systems.
+      </p>
+    </td>
+    <td width="360" valign="top">
+      <a href="https://youtu.be/w70hpMyDvRU">
+        <img src="https://img.youtube.com/vi/w70hpMyDvRU/maxresdefault.jpg"
+             width="360"
+             alt="aKaReZa 110 – Microcontroller, GSM Modems Thumbnail"/>
+      </a>
+    </td>
+  </tr>
   
 # 💻 How to Use Git and GitHub
 To access the repository files and save them on your computer, there are two methods available:
