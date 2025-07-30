@@ -5,6 +5,11 @@ The board is tailored for developers and students who want to **learn GSM-based 
 
 ![Quectel M66 Shield](Images/Quectel_M66.png)
 
+> [!IMPORTANT]
+> Before sending the board files for PCB fabrication, **always make sure you are using the latest released version** of the project.
+> Hardware issues or design flaws might exist in earlier versions and could be fixed in newer releases.
+> To avoid costly mistakes and ensure the best performance, always refer to the **[Releases](../../releases)** section, where all known issues, updates, and version-specific notes are clearly documented.
+
 ### **M66 GSM Module Pin Mapping**
 
 | **M66 Module** | **Arduino Pin** | **Functionality**                                     |
