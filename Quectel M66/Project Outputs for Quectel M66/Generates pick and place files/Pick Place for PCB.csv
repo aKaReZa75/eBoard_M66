@@ -4,14 +4,19 @@ E:\aKaReZa\#gitHub\eBoard_M66\Quectel M66\Project Outputs for Quectel M66\Genera
 ========================================================================================================================
 File Design Information:
 
-Date:       28/06/25
-Time:       06:55
-Revision:   85fa1b9bbe1f799c0cebe5c0c5393c286101752f
+Date:       13/08/25
+Time:       13:32
+Revision:   e47e54e3fe6c52a4e440db296ceb2c28c99ae92d
 Variant:    No variations
 Units used: mm
 
 "Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
-"JP1","Jumper","BottomLayer","RESC2012M_(0805)","7.6200","18.9230","270","Jumper Component"
+"S3","PB","TopLayer","SW_PB_SMD_2PIN_SPST_6X3X2","9.7790","2.7940","0","SMT Tactile ?Switch"
+"S2","PB","TopLayer","SW_PB_SMD_2PIN_SPST_6X3X2","9.7790","7.1755","0","SMT Tactile ?Switch"
+"R14","10K","BottomLayer","RES_0805_(2012X06L)","8.6360","7.1510","270","Resistor"
+"R22","10K","BottomLayer","RES_0805_(2012X06L)","8.6360","2.6280","90","Resistor"
+"C28","100n","BottomLayer","CAP_0805/2012","11.0490","7.1374","270","Bipolar ceramic capacitor SMD"
+"C29","100n","BottomLayer","CAP_0805/2012","11.0490","2.6416","90","Bipolar ceramic capacitor SMD"
 "J5","3","TopLayer","HDR_THT_3M_2.54mm","45.7200","47.4980","90","Header, single row, 3 pin"
 "J4","16b","TopLayer","USBC_SMD_16_USB4110_-_Extended","26.4360","5.2689","180","USB C Female Connector"
 "JP5","0b","TopLayer","jumper_selector","42.4180","15.4940","90","Jumper Selector"
@@ -20,7 +25,7 @@ Units used: mm
 "R8","1K","TopLayer","RES_0805_(2012X06L)","42.5450","8.9100","90","Resistor"
 "R7","1K","TopLayer","RES_0805_(2012X06L)","44.4562","8.9100","90","Resistor"
 "R9","5.6K","TopLayer","RES_0805_(2012X06L)","46.3673","8.9100","90","Resistor"
-"R24","1K","BottomLayer","RES_0805_(2012X06L)","34.4510","14.2240","180","Resistor"
+"R24","1K","BottomLayer","RES_0805_(2012X06L)","34.5050","14.2240","0","Resistor"
 "R23","560b","BottomLayer","RES_0805_(2012X06L)","34.4560","17.7800","180","Resistor"
 "R21","560b","BottomLayer","RES_0805_(2012X06L)","34.4510","16.0020","180","Resistor"
 "R13","4.7K","BottomLayer","RES_0805_(2012X06L)","27.6860","3.0090","90","Resistor"
@@ -46,9 +51,9 @@ Units used: mm
 "P1","10K","TopLayer","Multi_turn_01","5.4610","50.4190","180","Multi Turn"
 "R15","15k","BottomLayer","RES_0805_(2012X06L)","36.2830","31.4960","0","Resistor"
 "U1","TPS54302","TopLayer","TPS54302","12.4460","21.0820","270","3'A Synchronous Step-Down Converter"
-"S1","PB","TopLayer","SW_PB_SMD_2PIN_SPST_6X3X2","14.0970","7.8740","0","SMT Tactile ?Switch"
-"R11","47K","TopLayer","RES_0805_(2012X06L)","13.8430","12.5390","90","Resistor"
-"R10","4.7K","TopLayer","RES_0805_(2012X06L)","10.8830","13.5890","0","Resistor"
+"S1","PB","TopLayer","SW_PB_SMD_2PIN_SPST_6X3X2","9.7790","11.5570","0","SMT Tactile ?Switch"
+"R11","47K","TopLayer","RES_0805_(2012X06L)","9.5250","15.9680","90","Resistor"
+"R10","4.7K","TopLayer","RES_0805_(2012X06L)","6.5650","17.0180","0","Resistor"
 "R17","100b","TopLayer","RES_0805_(2012X06L)","8.2550","61.8150","90","Resistor"
 "R16","1.8K","TopLayer","RES_0805_(2012X06L)","2.0320","61.8150","90","Resistor"
 "R20","100K","TopLayer","RES_0805_(2012X06L)","17.7800","21.4970","270","Resistor"
@@ -60,7 +65,7 @@ Units used: mm
 "R3","4.7K","TopLayer","RES_0805_(2012X06L)","45.7200","57.9460","270","Resistor"
 "R2","100b","TopLayer","RES_0805_(2012X06L)","42.6720","61.8150","90","Resistor"
 "R1","100b","TopLayer","RES_0805_(2012X06L)","48.6410","61.8150","90","Resistor"
-"Q3","NPN","TopLayer","SOT23_N","16.9250","12.5120","0","NPN General purpose Transistor"
+"Q3","NPN","TopLayer","SOT23_N","12.6070","15.9410","0","NPN General purpose Transistor"
 "Q2","NPN","TopLayer","SOT23_N","42.6720","57.7850","90","NPN General purpose Transistor"
 "Q1","NPN","TopLayer","SOT23_N","48.6410","57.9120","90","NPN General purpose Transistor"
 "P2","UNO","TopLayer","Arduino_uno_S_3","26.5430","27.6860","0","Arduino uno slave"
