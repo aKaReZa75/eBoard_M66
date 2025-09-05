@@ -277,16 +277,16 @@ DocumentPath=Project Outputs for Quectel M66\Report Single Pin Nets\Quectel M66.
 DItemRevisionGUID=
 
 [Parameter1]
-Name=CompanyName
-Value=github.com/aKaReZa75
+Name=Revision
+Value=1.2
 
 [Parameter2]
 Name=Project_Name
 Value=Quectel M66
 
 [Parameter3]
-Name=Revision
-Value=1.1
+Name=CompanyName
+Value=github.com/aKaReZa75
 
 [Configuration1]
 Name=Sources

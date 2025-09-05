@@ -4,13 +4,17 @@ E:\aKaReZa\#gitHub\eBoard_M66\Quectel M66\Project Outputs for Quectel M66\Genera
 ========================================================================================================================
 File Design Information:
 
-Date:       13/08/25
-Time:       13:32
-Revision:   e47e54e3fe6c52a4e440db296ceb2c28c99ae92d
+Date:       05/09/25
+Time:       19:10
+Revision:   b8807a5bf1a74ed365e5eb7be5ebf7d4fff86147
 Variant:    No variations
 Units used: mm
 
 "Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"R26","560b","TopLayer","RES_0805_(2012X06L)","25.9960","25.5270","0","Resistor"
+"R25","560b","TopLayer","RES_0805_(2012X06L)","25.9960","27.8130","0","Resistor"
+"D8","GREEN","TopLayer","LED_0805/2012_GREEN","21.7170","27.8130","180","LED"
+"D7","RED","TopLayer","LED_0805/2012_RED","21.7170","25.5270","180","LED"
 "S3","PB","TopLayer","SW_PB_SMD_2PIN_SPST_6X3X2","9.7790","2.7940","0","SMT Tactile ?Switch"
 "S2","PB","TopLayer","SW_PB_SMD_2PIN_SPST_6X3X2","9.7790","7.1755","0","SMT Tactile ?Switch"
 "R14","10K","BottomLayer","RES_0805_(2012X06L)","8.6360","7.1510","270","Resistor"
