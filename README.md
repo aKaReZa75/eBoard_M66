@@ -87,13 +87,22 @@ The board is tailored for developers and students who want to **learn GSM-based 
 
 ```plaintext
 Quectel M66
-    └── [aKaReZa 110 - GSM Modems]
-          ├─ Intro — Mobile networks (2G–4G) and module overview.
-          ├─ Modules — Quectel M66, SIMCom features.
-          ├─ AT Commands — Setup, communication, signal check.
-          ├─ SMS — Sending, receiving, error reporting via AT+CMEE.
-          ├─ Voice — Call functionality through AT command set.
-          └─ Syntax — `CR`, `NL` role and command sequencing tips.
+├── [aKaReZa 110 - GSM Modems]
+│   ├─ Intro — Mobile networks (2G–4G) and module overview.
+│   ├─ Modules — Quectel M66, SIMCom features.
+│   ├─ AT Commands — Setup, communication, signal check.
+│   ├─ SMS — Sending, receiving, error reporting via AT+CMEE.
+│   ├─ Voice — Call functionality through AT command set.
+│   └─ Syntax — `CR`, `NL` role and command sequencing tips.
+│
+└── [aKaReZa 120 - eBoard, Quectel M66]
+    ├─ Altium — Project creation and structure.
+    ├─ Power — Supply design and filtering.
+    ├─ Interface — Arduino-style pinout, UART, SIM.
+    ├─ Indicators — Power Key and Netlight setup.
+    ├─ Advanced — ADC, PCM, RFTXMON, antenna layout.
+    ├─ Audio — Microphone routing and signal integrity.
+    └─ Placement — Clean routing and performance tips.
 ```
 <table style="border-collapse: collapse;">
   <tr>
@@ -113,6 +122,25 @@ Quectel M66
       </a>
     </td>
   </tr>
+
+  <tr>
+    <td valign="top" style="padding: 0 10px;">
+      <h3 style="margin: 0;">
+        <a href="https://youtu.be/ObjI_Sf4Z2g">aKaReZa 120 – eBoard, Quectel M66</a>
+      </h3>
+      <p style="margin: 8px 0 0;">
+        Design and analyze a complete educational board for the Quectel M66 GSM module using Altium Designer. This video covers power supply setup, UART and SIM interface, ADC/PCM integration, antenna and audio routing, and noise filtering—ideal for building robust GSM hardware with clean layout and Arduino-style accessibility.
+      </p>
+    </td>
+    <td width="360" valign="top">
+      <a href="https://youtu.be/ObjI_Sf4Z2g">
+        <img src="https://img.youtube.com/vi/ObjI_Sf4Z2g/maxresdefault.jpg"
+             width="360"
+             alt="aKaReZa 120 – eBoard, Quectel M66 Thumbnail"/>
+      </a>
+    </td>
+  </tr>
+  
 </table>
   
 # 💻 How to Use Git and GitHub
