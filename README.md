@@ -115,15 +115,24 @@ Quectel M66
 │   ├─ Voice — Call functionality through AT command set.
 │   └─ Syntax — `CR`, `NL` role and command sequencing tips.
 │
-└── [aKaReZa 120 - eBoard, Quectel M66]
-    ├─ Altium — Project creation and structure.
-    ├─ Power — Supply design and filtering.
-    ├─ Interface — Arduino-style pinout, UART, SIM.
-    ├─ Indicators — Power Key and Netlight setup.
-    ├─ Advanced — ADC, PCM, RFTXMON, antenna layout.
-    ├─ Audio — Microphone routing and signal integrity.
-    └─ Placement — Clean routing and performance tips.
+├── [aKaReZa 120 - eBoard, Quectel M66]
+│   ├─ Altium — Project creation and structure.
+│   ├─ Power — Supply design and filtering.
+│   ├─ Interface — Arduino-style pinout, UART, SIM.
+│   ├─ Indicators — Power Key and Netlight setup.
+│   ├─ Advanced — ADC, PCM, RFTXMON, antenna layout.
+│   ├─ Audio — Microphone routing and signal integrity.
+│   └─ Placement — Clean routing and performance tips.
+│
+└── [aKaReZa 135 - Repair, Quectel M66 Soldering]
+    ├─ Prep — Board and tool preparation for clean soldering.
+    ├─ Regulator — Power regulation section assembly.
+    ├─ GSM — M66 module and RF-sensitive area soldering.
+    ├─ SIM & Mic — SIM slot and audio path soldering.
+    ├─ CH340 — USB-to-serial interface assembly and checks.
+    └─ Testing — Power-up, connectivity, and sanity checks.
 ```
+
 <table style="border-collapse: collapse;">
   <tr>
     <td valign="top" style="padding: 0 10px;">
@@ -160,6 +169,25 @@ Quectel M66
       </a>
     </td>
   </tr>
+
+  <tr>
+    <td valign="top" style="padding: 0 10px;">
+      <h3 style="margin: 0;">
+        <a href="https://youtu.be/osVGKgXiZxo">aKaReZa 135 – Repair, Quectel M66 Soldering</a>
+      </h3>
+      <p style="margin: 8px 0 0;">
+        A complete, step‑by‑step walkthrough of soldering and assembling the <strong>Quectel M66 GSM shield</strong>. This episode covers board preparation, proper soldering technique for each circuit block, assembling the power regulation stage, GSM and RF‑sensitive areas, SIM and audio sections, the <strong>CH340 USB‑to‑serial interface</strong>, and finally performing full power‑up and connectivity tests to ensure a reliable GSM module build.
+      </p>
+    </td>
+    <td width="360" valign="top">
+      <a href="https://youtu.be/osVGKgXiZxo">
+        <img src="https://img.youtube.com/vi/osVGKgXiZxo/maxresdefault.jpg"
+             width="360"
+             alt="aKaReZa 135 – Repair, Quectel M66 Soldering Thumbnail"/>
+      </a>
+    </td>
+  </tr>
+
   
 </table>
   
